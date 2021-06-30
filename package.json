@@ -1,47 +1,22 @@
 {
-  "name": "pokaplayerfrontend",
-  "version": "1.0.0",
-  "private": true,
-  "description": "Frontend of PokaPlayer",
-  "author": "gnehs <jayuiop@gmail.com>",
+  "name": "pokaplayer",
+  "version": "0.0.0",
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "dev": "vue-cli-service serve"
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
   },
   "dependencies": {
-    "aplayer": "^1.10.1",
-    "axios": "^0.21.1",
-    "colorthief": "^2.3.2",
-    "pug": "^3.0.1",
-    "pug-plain-loader": "^1.0.0",
-    "register-service-worker": "^1.7.1",
-    "vue": "^2.6.11",
-    "vue-axios": "^2.1.5",
-    "vue-i18n": "^8.20.0",
-    "vue-router": "^3.4.2",
-    "vuetify": "^2.3.8",
-    "vuex": "^3.5.1"
+    "vue": "^3.0.5",
+    "vue-router": "^4.0.10"
   },
   "devDependencies": {
-    "@vue/cli-plugin-pwa": "^3.12.1",
-    "@vue/cli-service": "^3.12.1",
-    "deepmerge": "^4.2.2",
-    "fibers": "^4.0.3",
-    "node-sass": "^4.14.1",
-    "sass": "^1.26.10",
-    "sass-loader": "^8.0.2",
-    "vue-cli-plugin-vuetify": "^2.0.7",
-    "vue-template-compiler": "^2.6.11",
-    "vuetify-loader": "^1.6.0"
-  },
-  "postcss": {
-    "plugins": {
-      "autoprefixer": {}
-    }
-  },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions"
-  ]
+    "@vitejs/plugin-vue": "^1.2.3",
+    "@vue/cli-plugin-router": "^4.5.13",
+    "@vue/compiler-sfc": "^3.0.5",
+    "autoprefixer": "^10.2.6",
+    "postcss": "^8.3.5",
+    "tailwindcss": "^2.2.4",
+    "vite": "^2.3.8"
+  }
 }
