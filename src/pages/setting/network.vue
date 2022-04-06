@@ -22,13 +22,13 @@
         <v-card-text>
           <poka-cards class="poka four doubling cards" :hide-overflow="false">
             <poka-card
-              v-for="(item, index) of ['Low', 'Medium', 'High', 'Ori']"
-              @click.native="setSoundQuality('Low')"
+              v-for="({localizationKey, settingValue}, index) of soundQualityOptions"
+              @click.native="setSoundQuality(settingValue)"
               :key="index"
               poka-icon="bx-music"
               :ellipsis="false"
-              :poka-title="$t(`settings.network.soundQuality.${item.toLocaleLowerCase()}.title`)"
-              :poka-subtitle="$t(`settings.network.soundQuality.${item.toLocaleLowerCase()}.description`)"
+              :poka-title="$t(`settings.network.soundQuality.${localizationKey}.title`)"
+              :poka-subtitle="$t(`settings.network.soundQuality.${localizationKey}.description`)"
             />
           </poka-cards>
         </v-card-text>
@@ -46,7 +46,25 @@ export default {
   name: 'SettingNetwork',
   data: () => ({
     soundQuality: window._setting('audioQuality'),
-    showSoundQualityDialog: false
+    showSoundQualityDialog: false,
+    soundQualityOptions: [
+        {
+            localizationKey: 'low',
+            settingValue: 'low'
+        },
+        {
+            localizationKey: 'medium',
+            settingValue: 'medium'
+        },
+        {
+            localizationKey: 'high',
+            settingValue: 'high'
+        },
+        {
+            localizationKey: 'ori',
+            settingValue: 'original'
+        }
+    ]
   }),
   methods: {
     setSoundQuality(quality) {
